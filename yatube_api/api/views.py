@@ -1,10 +1,10 @@
-# TODO:  Напишите свой вариант
 from rest_framework import viewsets
 from django.shortcuts import get_object_or_404
 from rest_framework import filters
 
 from posts.models import Post, Group, Follow
-from .serializers import PostSerializer, GroupSerializer, CommentSerializer, FollowSerializer
+from .serializers import (PostSerializer, GroupSerializer,
+                          CommentSerializer, FollowSerializer)
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from .permissions import IsOwnerOrReadOnly
 from rest_framework.pagination import LimitOffsetPagination
@@ -50,4 +50,3 @@ class FollowsViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
-
