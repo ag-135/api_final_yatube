@@ -1,4 +1,4 @@
-# Проект Api_final_yatube 
+# Проект api_final_yatube 
 ## Описание 
 Проект взаимодействия API для программы social_network(yatube) выполненный в DRF  
 ## Установка
